@@ -33,15 +33,15 @@ transactions = pd.DataFrame({
 transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
 
 #======================================================================================================
-# Meta info
+# Meta info  (SEE ALL ANSWERS BELOW (LINE 240))
 
-# Q1 Full summary
-
-
-# Q2 How many rows?
+# Q1 Full summary (SEE ALL ANSWERS BELOW (LINE 240))
 
 
-# Q3 How many columns?
+# Q2 How many rows?  (SEE ALL ANSWERS BELOW (LINE 240))
+
+
+# Q3 How many columns?  (SEE ALL ANSWERS BELOW (LINE 240))
 
 
 # Q4 Get the row names
@@ -59,10 +59,10 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 # Q8 Ordering the rows of a DataFrame
 
-# Q9 Order the rows of transactions by TransactionID descending
+# Q9 Order the rows of transactions by TransactionID descending  (SEE ANSWERS BELOW (LINE 240))
 
 
-# Q10 Order the rows of transactions by Quantity ascending, TransactionDate descending
+# Q10 Order the rows of transactions by Quantity ascending, TransactionDate descending  (SEE ANSWERS BELOW (LINE 240))
 
 
 #======================================================================================================
@@ -77,7 +77,7 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 # Q14 Extracting arrays from a DataFrame
 
-# Q15 Get the 2nd column
+# Q15 Get the 2nd column  (SEE ALL ANSWERS BELOW (LINE 240))
 
 
 # Q16 Get the ProductID array
@@ -89,7 +89,7 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 # Row subsetting
 
-# Q18 Subset rows 1, 3, and 6
+# Q18 Subset rows 1, 3, and 6   (SEE ALL ANSWERS BELOW (LINE 240))
 
 
 # Q19 Subset rows exlcuding 1, 3, and 6
@@ -133,7 +133,7 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 # Column subsetting
 
-# Q32 Subset by columns 1 and 3
+# Q32 Subset by columns 1 and 3   (SEE ALL ANSWERS BELOW (LINE 240))
 
 
 # Q33 Subset by columns TransactionID and TransactionDate
@@ -150,7 +150,7 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 # Inserting and updating values
 
-# Q37 Convert the TransactionDate column to type Date
+# Q37 Convert the TransactionDate column to type Date  (SEE ALL ANSWERS BELOW (LINE 240))
 
 
 # Q38 Insert a new column, Foo = UserID + ProductID
@@ -161,7 +161,7 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 
 # Q40 Add 100 to each TransactionID
 
-# Q41 Insert a column indicating each row number
+# Q41 Insert a column indicating each row number  (SEE ALL ANSWERS BELOW (LINE 240))
 
 
 # Q42 Insert columns indicating the rank of each Quantity, minimum Quantity and maximum Quantity
@@ -186,10 +186,10 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 # Joining DataFrames
 
-# Q 47 Load datasets from CSV
+# Q 47 Load datasets from CSV  (SEE ALL ANSWERS BELOW (LINE 240))
 
 
-# Q48 Convert date columns to Date type
+# Q48 Convert date columns to Date type  (SEE ALL ANSWERS BELOW (LINE 240))
 
 
 #--------------------------------------------------
