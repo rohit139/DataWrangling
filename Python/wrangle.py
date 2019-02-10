@@ -1,5 +1,7 @@
 # Wrangle Data With pandas
-
+# ATTEMPT AS MANY QUESTIONS AS YOU CAN 
+# PREFERABLY 45 QUESTIONS
+# SEE ANSWERS BELOW (LINE 240)
 #======================================================================================================
 # Install numpy and pandas
 
