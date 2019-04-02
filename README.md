@@ -1,4 +1,3 @@
-#### Anxious to start? [*Data Wrangling with pandas (Python)*](https://github.com/ben519/DataWrangling/blob/master/Python/README.md) | [*Data Wrangling with data.table (R)*](https://github.com/ben519/DataWrangling/blob/master/R/README.md)
 
 ---
 
