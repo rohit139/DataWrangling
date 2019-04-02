@@ -46,17 +46,18 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 
 #======================================================================================================
 # Ordering the columns of a DataFrame
+
 # Q10 Set the column order of transactions as: ProductID, Quantity, TransactionDate, TransactionID, UserID
 # Q11 Make UserID the first column of transactions
 
 #======================================================================================================
 # Extracting arrays from a DataFrame
+
 # Q12 Extract just the 2nd column 
 # Q13 Get ProductID array
 # Q14 Let:
        col = "ProductID"
 #     Use col to get all ProductID values as an array    
-
 
 
 #======================================================================================================
@@ -134,14 +135,13 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 # Reshaping a data.table
 
-# Q58 Read datasets from CSV
+# Q55 Read following datasets from CSV
+
 users = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/users.csv')
 transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
 
-# Q59 Convert date columns to Date type
-
-
-# Q60 Add column TransactionWeekday as Categorical type with categories Sunday through Saturday
+# Q56 Convert date columns to Date type
+# Q57 Add column TransactionWeekday as Categorical type with categories Sunday through Saturday
 
 
 ##################################################################
@@ -309,22 +309,22 @@ transactions.drop(['QuantityRk', 'QuantityMin', 'QuantityMax'], axis=1, inplace=
 # Q42 Group the transations per user, measuring the number of transactions per user
 
 transactions.groupby('UserID').apply(lambda x: pd.Series(dict(
-    Transactions=x.shape[0]
-))).reset_index()
+                                                             Transactions=x.shape[0]
+                                                              ))).reset_index()
 
 # Q43 Group the transactions per user, measuring the transactions and average quantity per user
 
 transactions.groupby('UserID').apply(lambda x: pd.Series(dict(
-    Transactions=x.shape[0],
-    QuantityAvg=x.Quantity.mean()
-))).reset_index()
+                                                             Transactions=x.shape[0],
+                                                             QuantityAvg=x.Quantity.mean()
+                                                              ))).reset_index()
 
 
 
 #======================================================================================================
 # Joining DataFrames
 
-# Q44. Load datasets from CSV
+# Q44. Load following datasets from CSV
 
 users = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/users.csv')
 sessions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/sessions.csv')
@@ -332,6 +332,7 @@ products = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/m
 transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
 
 # Q45 Convert date columns to Date type
+
 users['Registered'] = pd.to_datetime(users.Registered)
 users['Cancelled'] = pd.to_datetime(users.Cancelled)
 transactions['TransactionDate'] = pd.to_datetime(transactions.TransactionDate)
@@ -340,26 +341,33 @@ transactions['TransactionDate'] = pd.to_datetime(transactions.TransactionDate)
 # Basic Joins
 
 # Q49 Join users to transactions, keeping all rows from transactions and only matching rows from users (left join)
+
 transactions.merge(users, how='left', on='UserID')
 
 # Q50 Which transactions have a UserID not in users? (anti join)
+
 transactions[~transactions['UserID'].isin(users['UserID'])]
 
 # Q51 Join users to transactions, keeping only rows from transactions and users that match via UserID (inner join)
+
 transactions.merge(users, how='inner', on='UserID')
 
 # Q52 Join users to transactions, displaying all matching rows AND all non-matching rows (full outer join)
+
 transactions.merge(users, how='outer', on='UserID')
 
 # Q53 Determine which sessions occured on the same day each user registered
+
 pd.merge(left=users, right=sessions, how='inner', left_on=['UserID', 'Registered'], right_on=['UserID', 'SessionDate'])
 
 # Q54 Build a dataset with every possible (UserID, ProductID) pair (cross join)
+
 df1 = pd.DataFrame({'key': np.repeat(1, users.shape[0]), 'UserID': users.UserID})
 df2 = pd.DataFrame({'key': np.repeat(1, products.shape[0]), 'ProductID': products.ProductID})
 pd.merge(df1, df2,on='key')[['UserID', 'ProductID']]
 
 # Q55 Determine how much quantity of each product was purchased by each user
+
 df1 = pd.DataFrame({'key': np.repeat(1, users.shape[0]), 'UserID': users.UserID})
 df2 = pd.DataFrame({'key': np.repeat(1, products.shape[0]), 'ProductID': products.ProductID})
 user_products = pd.merge(df1, df2,on='key')[['UserID', 'ProductID']]
@@ -368,22 +376,27 @@ pd.merge(user_products, transactions, how='left', on=['UserID', 'ProductID']).gr
 ))).reset_index().fillna(0)
 
 # Q56 For each user, get each possible pair of pair transactions (TransactionID1, TransactionID2)
+
 pd.merge(transactions, transactions, on='UserID')
 
 # Q57 Join each user to his/her first occuring transaction in the transactions table
+
 pd.merge(users, transactions.groupby('UserID').first().reset_index(), how='left', on='UserID')
 
 #======================================================================================================
 # Reshaping a data.table
 
 # Q58 Read datasets from CSV
+
 users = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/users.csv')
 transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
 
 # Q59 Convert date columns to Date type
+
 users['Registered'] = pd.to_datetime(users.Registered)
 users['Cancelled'] = pd.to_datetime(users.Cancelled)
 transactions['TransactionDate'] = pd.to_datetime(transactions.TransactionDate)
 
 # Q60 Add column TransactionWeekday as Categorical type with categories Sunday through Saturday
+
 transactions['TransactionWeekday'] = pd.Categorical(transactions.TransactionDate.dt.weekday_name, categories=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'])
