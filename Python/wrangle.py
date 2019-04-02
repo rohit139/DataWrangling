@@ -35,54 +35,28 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 # Meta info  (SEE ALL ANSWERS BELOW (LINE 240))
 
-# Q1 Full summary (SEE ALL ANSWERS BELOW (LINE 240))
-
-
-# Q2 How many rows?  (SEE ALL ANSWERS BELOW (LINE 240))
-
-
-# Q3 How many columns?  (SEE ALL ANSWERS BELOW (LINE 240))
-
-
-# Q4 Get the row names
-
-
+# Q1 Show dataframe summary 
+# Q2 How many observations are there in data?
+# Q3 How many features (columns) exist in the dataset?
+# Q4 Get feature names
 # Q5 Get the column names
-
-
 # Q6 Change the name of column "Quantity" to "Quant"
-
-
 # Q7 Change the name of columns ProductID and UserID to PID and UID respectively
-
-
 #======================================================================================================
 # Q8 Ordering the rows of a DataFrame
 
-# Q9 Order the rows of transactions by TransactionID descending  (SEE ANSWERS BELOW (LINE 240))
-
-
-# Q10 Order the rows of transactions by Quantity ascending, TransactionDate descending  (SEE ANSWERS BELOW (LINE 240))
-
+# Q9 Order the rows of transactions by TransactionID (descending )
+# Q10 Order the rows of transactions by Quantity ascending and TransactionDate descending
 
 #======================================================================================================
 # Q11 Ordering the columns of a DataFrame
-
-# Q12 Set the column order of transactions as ProductID, Quantity, TransactionDate, TransactionID, UserID
-
-
+# Q12 Set the column order of transactions as: ProductID, Quantity, TransactionDate, TransactionID, UserID
 # Q13 Make UserID the first column of transactions
-
 
 #======================================================================================================
 # Q14 Extracting arrays from a DataFrame
-
-# Q15 Get the 2nd column  (SEE ALL ANSWERS BELOW (LINE 240))
-
-
-# Q16 Get the ProductID array
-
-
+# Q15 Extract just the 2nd column 
+# Q16 Get ProductID array
 # Q17 Get the ProductID array using a variable
 
 
