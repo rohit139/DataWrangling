@@ -2,11 +2,7 @@
 # ATTEMPT AS MANY QUESTIONS AS YOU CAN 
 # PREFERABLY ANSWER AT LEAST 45 QUESTIONS
 # SEE ANSWERS BELOW (LINE 240)
-#======================================================================================================
-# Install numpy and pandas
 
-pip install numpy
-pip install pandas
 
 #======================================================================================================
 # Import numpy and pandas
@@ -15,7 +11,7 @@ import numpy as np
 import pandas as pd
 
 #======================================================================================================
-# Build DataFrame from scratch
+# Build an example DataFrame from scratch
 
 transactions = pd.DataFrame({
     'TransactionID': np.arange(10)+1,
@@ -29,7 +25,7 @@ transactions = pd.DataFrame({
 #======================================================================================================
 # Read data from a CSV file
 
-# Load transactions
+# Load transactions. Data is imported from github site
 transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
 
 #======================================================================================================
@@ -39,111 +35,69 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 # Q2 How many observations are there in data?
 # Q3 How many features (columns) exist in the dataset?
 # Q4 Get feature names
-# Q5 Get the column names
+# Q5 Get the column names as an array
 # Q6 Change the name of column "Quantity" to "Quant"
-# Q7 Change the name of columns ProductID and UserID to PID and UID respectively
+# Q7 Change the names of columns ProductID and UserID to PID and UID respectively
 #======================================================================================================
-# Q8 Ordering the rows of a DataFrame
+# Ordering the rows of a DataFrame
 
-# Q9 Order the rows of transactions by TransactionID (descending )
-# Q10 Order the rows of transactions by Quantity ascending and TransactionDate descending
-
-#======================================================================================================
-# Q11 Ordering the columns of a DataFrame
-# Q12 Set the column order of transactions as: ProductID, Quantity, TransactionDate, TransactionID, UserID
-# Q13 Make UserID the first column of transactions
+# Q8 Order the rows of transactions by TransactionID (descending )
+# Q9 Order the rows of transactions by Quantity ascending and TransactionDate descending
 
 #======================================================================================================
-# Q14 Extracting arrays from a DataFrame
-# Q15 Extract just the 2nd column 
-# Q16 Get ProductID array
-# Q17 Get the ProductID array using a variable
+# Ordering the columns of a DataFrame
+# Q10 Set the column order of transactions as: ProductID, Quantity, TransactionDate, TransactionID, UserID
+# Q11 Make UserID the first column of transactions
+
+#======================================================================================================
+# Extracting arrays from a DataFrame
+# Q12 Extract just the 2nd column 
+# Q13 Get ProductID array
+# Q14 Let:
+       col = "ProductID"
+#     Use col to get all ProductID values as an array    
+
 
 
 #======================================================================================================
 # Row subsetting
 
-# Q18 Subset rows 1, 3, and 6   (SEE ALL ANSWERS BELOW (LINE 240))
-
-
-# Q19 Subset rows exlcuding 1, 3, and 6
-
-
-# Q20 Subset the first 3 rows
-
-
-# Q21 Subset rows excluding the first 3 rows
-
-
-# Q22 Subset the last 2 rows
-
-
-# Q23 Subset rows excluding the last 2 rows
-
-
-# Q24 Subset rows where Quantity > 1
-
-
-# Q25 Subset rows where UserID = 2
-
-
-# Q26 Subset rows where Quantity > 1 and UserID = 2
-
-
-# Q27 Subset rows where Quantity + UserID is > 3
-
-
-# Q28 Subset rows where an external array, foo, is True
-
-# Q29 Subset rows where an external array, bar, is positive
-
-
-# Q30 Subset rows where foo is TRUE or bar is negative
-
-
-# Q31 Subset the rows where foo is not TRUE and bar is not negative
+# Q15 Subset rows 1, 3, and 6 
+# Q16 Subset rows exlcuding 1, 3, and 6
+# Q17 Subset the first 3 rows
+# Q18 Subset rows excluding the first 3 rows
+# Q19 Subset the last 2 rows
+# Q20 Subset rows excluding the last 2 rows
+# Q21 Subset rows where Quantity > 1
+# Q22 Subset rows where UserID = 2
+# Q23 Subset rows where Quantity > 1 and UserID = 2
+# Q24 Subset rows where Quantity + UserID is > 3
+# Q25 Subset rows where an external array, foo, is True
+# Q26 Subset rows where an external array, bar, is positive
+# Q27 Subset rows where foo is TRUE or bar is negative
+# Q28 Subset the rows where foo is not TRUE and bar is not negative
 
 
 #======================================================================================================
 # Column subsetting
 
-# Q32 Subset by columns 1 and 3   (SEE ALL ANSWERS BELOW (LINE 240))
+# Q29 Subset by columns 1 and 3   (SEE ALL ANSWERS BELOW (LINE 240))
+# Q30 Subset by columns TransactionID and TransactionDate
+# Q31 Subset rows where TransactionID > 5 and subset columns by TransactionID and TransactionDate
+# Q32 Subset columns by a variable list of columm names
+# Q33 Subset columns excluding a variable list of column names
 
-
-# Q33 Subset by columns TransactionID and TransactionDate
-
-
-# Q34 Subset rows where TransactionID > 5 and subset columns by TransactionID and TransactionDate
-
-
-# Q35 Subset columns by a variable list of columm names
-
-
-
-# Q36 Subset columns excluding a variable list of column names
 #======================================================================================================
 # Inserting and updating values
 
-# Q37 Convert the TransactionDate column to type Date  (SEE ALL ANSWERS BELOW (LINE 240))
-
-
-# Q38 Insert a new column, Foo = UserID + ProductID
-
-
-# Q39 Subset rows where TransactionID is even and set Foo = NA
-
-
-# Q40 Add 100 to each TransactionID
-
-# Q41 Insert a column indicating each row number  (SEE ALL ANSWERS BELOW (LINE 240))
-
-
-# Q42 Insert columns indicating the rank of each Quantity, minimum Quantity and maximum Quantity
-
-# Q43 Remove column Foo
-
-
-# Q44 Remove multiple columns RowIdx, QuantityRk, and RowIdx
+# Q34 Convert the TransactionDate column to type Date  (SEE ALL ANSWERS BELOW (LINE 240))
+# Q35 Insert a new column, Foo = UserID + ProductID
+# Q36 Subset rows where TransactionID is even and set Foo = NA
+# Q37  Add 100 to each TransactionID
+# Q38 Insert a column indicating each row number  (SEE ALL ANSWERS BELOW (LINE 240))
+# Q39 Insert columns indicating the rank of each Quantity, minimum Quantity and maximum Quantity
+# Q40 Remove column Foo
+# Q41 Remove multiple columns RowIdx, QuantityRk, and RowIdx
 
 
 #======================================================================================================
@@ -152,49 +106,29 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #--------------------------------------------------
 # Group By + Aggregate
 
-# Q45 Group the transations per user, measuring the number of transactions per user
-# 46 Group the transactions per user, measuring the transactions and average quantity per user
-
+# Q42 Group the transations per user, measuring the number of transactions per user
+# Q43 Group the transactions per user, measuring the transactions and average quantity per user
 
 
 #======================================================================================================
 # Joining DataFrames
 
-# Q 47 Load datasets from CSV  (SEE ALL ANSWERS BELOW (LINE 240))
-
-
-# Q48 Convert date columns to Date type  (SEE ALL ANSWERS BELOW (LINE 240))
+# Q44 Load datasets from CSV  (SEE ALL ANSWERS BELOW (LINE 240))
+# Q45 Convert date columns to Date type  (SEE ALL ANSWERS BELOW (LINE 240))
 
 
 #--------------------------------------------------
 # Basic Joins
 
-# Q49 Join users to transactions, keeping all rows from transactions and only matching rows from users (left join)
-
-
-# Q50 Which transactions have a UserID not in users? (anti join)
-
-
-# Q51 Join users to transactions, keeping only rows from transactions and users that match via UserID (inner join)
-
-
-# Q52 Join users to transactions, displaying all matching rows AND all non-matching rows (full outer join)
-
-
-# Q53 Determine which sessions occured on the same day each user registered
-
-
-# Q54 Build a dataset with every possible (UserID, ProductID) pair (cross join)
-
-
-# Q55 Determine how much quantity of each product was purchased by each user
-
-
-# Q56 For each user, get each possible pair of pair transactions (TransactionID1, TransactionID2)
-
-
-# Q57 Join each user to his/her first occuring transaction in the transactions table
-
+# Q46 Join users to transactions, keeping all rows from transactions and only matching rows from users (left join)
+# Q47 Which transactions have a UserID not in users? (anti join)
+# Q48 Join users to transactions, keeping only rows from transactions and users that match via UserID (inner join)
+# Q49 Join users to transactions, displaying all matching rows AND all non-matching rows (full outer join)
+# Q50 Determine which sessions occured on the same day each user registered
+# Q51 Build a dataset with every possible (UserID, ProductID) pair (cross join)
+# Q52 Determine how much quantity of each product was purchased by each user
+# Q53 For each user, get each possible pair of pair transactions (TransactionID1, TransactionID2)
+# Q54 Join each user to his/her first occuring transaction in the transactions table
 
 
 #======================================================================================================
@@ -213,41 +147,6 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 ##################################################################
 ## Answers are here
 ##################################################################
-
-# Wrangle Data With pandas
-
-#======================================================================================================
-# Install numpy and pandas
-
-pip install numpy
-pip install pandas
-
-#======================================================================================================
-# Import numpy and pandas
-
-import numpy as np
-import pandas as pd
-
-#======================================================================================================
-# Build DataFrame from scratch
-
-transactions = pd.DataFrame({
-    'TransactionID': np.arange(10)+1,
-    'TransactionDate': pd.to_datetime(['2010-08-21', '2011-05-26', '2011-06-16', '2012-08-26', '2013-06-06', 
-                              '2013-12-23', '2013-12-30', '2014-04-24', '2015-04-24', '2016-05-08']).date,
-    'UserID': [7, 3, 3, 1, 2, 2, 3, np.nan, 7, 3],
-    'ProductID': [2, 4, 3, 2, 4, 5, 4, 2, 4, 4],
-    'Quantity': [1, 1, 1, 3, 1, 6, 1, 3, 3, 4]
-})
-
-#======================================================================================================
-# Read data from a CSV file
-
-# Load transactions
-transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
-
-#======================================================================================================
-# Meta info
 
 # Q1 Full summary
 transactions.info()
@@ -271,133 +170,134 @@ transactions.rename(columns={'Quantity': 'Quant'})  # use argument inplace=TRUE 
 transactions.rename(columns={'ProductID': 'PID', 'UserID': 'UID'})  # use argument inplace=TRUE to keep the changes
 
 #======================================================================================================
-# Q8 Ordering the rows of a DataFrame
+# Ordering the rows of a DataFrame
 
-# Q9 Order the rows of transactions by TransactionID descending
+# Q8 Order the rows of transactions by TransactionID descending
 transactions.sort_values('TransactionID', ascending=False)
 
-# Q10 Order the rows of transactions by Quantity ascending, TransactionDate descending
+# Q9 Order the rows of transactions by Quantity ascending, TransactionDate descending
 transactions.sort_values(['Quantity', 'TransactionDate'], ascending=[True, False])
 
 #======================================================================================================
-# Q11 Ordering the columns of a DataFrame
+# Ordering the columns of a DataFrame
 
-# Q12 Set the column order of transactions as ProductID, Quantity, TransactionDate, TransactionID, UserID
+# Q10 Set the column order of transactions as ProductID, Quantity, TransactionDate, TransactionID, UserID
 transactions[['ProductID', 'Quantity', 'TransactionDate', 'TransactionID', 'UserID']]
 
-# Q13 Make UserID the first column of transactions
+# Q11 Make UserID the first column of transactions
 transactions[pd.unique(['UserID'] + transactions.columns.values.tolist()).tolist()]
 
 #======================================================================================================
-# Q14 Extracting arrays from a DataFrame
+# Extracting arrays from a DataFrame
 
-# Q15 Get the 2nd column
+# Q12 Get the 2nd column
 transactions[[1]].values[:, 0]
 
-# Q16 Get the ProductID array
+# Q13 Get the ProductID array
 transactions.ProductID.values
 
-# Q17 Get the ProductID array using a variable
+# Q14 Get the ProductID array using a variable
 col = "ProductID"
 transactions[[col]].values[:, 0]
 
 #======================================================================================================
 # Row subsetting
 
-# Q18 Subset rows 1, 3, and 6
+# Q15 Subset rows 1, 3, and 6
 transactions.iloc[[0,2,5]]
 
-# Q19 Subset rows exlcuding 1, 3, and 6
+# Q16 Subset rows exlcuding 1, 3, and 6
 transactions.drop([0,2,5], axis=0)
 
-# Q20 Subset the first 3 rows
+# Q17 Subset the first 3 rows
 transactions[:3]
 transactions.head(3)
 
-# Q21 Subset rows excluding the first 3 rows
+# Q18 Subset rows excluding the first 3 rows
 transactions[3:]
 transactions.tail(-3)
 
-# Q22 Subset the last 2 rows
+# Q19 Subset the last 2 rows
 transactions.tail(2)
 
-# Q23 Subset rows excluding the last 2 rows
+# Q20 Subset rows excluding the last 2 rows
 transactions.tail(-2)
 
-# Q24 Subset rows where Quantity > 1
+# Q21 Subset rows where Quantity > 1
 transactions[transactions.Quantity > 1]
 
-# Q25 Subset rows where UserID = 2
+# Q22 Subset rows where UserID = 2
 transactions[transactions.UserID == 2]
 
-# Q26 Subset rows where Quantity > 1 and UserID = 2
+# Q23 Subset rows where Quantity > 1 and UserID = 2
 transactions[(transactions.Quantity > 1) & (transactions.UserID == 2)]
 
-# Q27 Subset rows where Quantity + UserID is > 3
+# Q24 Subset rows where Quantity + UserID is > 3
 transactions[transactions.Quantity + transactions.UserID > 3]
 
-# Q28 Subset rows where an external array, foo, is True
+# Q25 Subset rows where an external array, foo, is True
 foo = np.array([True, False, True, False, True, False, True, False, True, False])
 transactions[foo]
 
-# Q29 Subset rows where an external array, bar, is positive
+# Q26 Subset rows where an external array, bar, is positive
 bar = np.array([1, -3, 2, 2, 0, -4, -4, 0, 0, 2])
 transactions[bar > 0]
 
-# Q30 Subset rows where foo is TRUE or bar is negative
+# Q27 Subset rows where foo is TRUE or bar is negative
 transactions[foo | (bar < 0)]
 
-# Q31 Subset the rows where foo is not TRUE and bar is not negative
+# Q28 Subset the rows where foo is not TRUE and bar is not negative
 transactions[~foo & (bar >= 0)]
 
 #======================================================================================================
 # Column subsetting
 
-# Q32 Subset by columns 1 and 3
+# Q29 Subset by columns 1 and 3
 transactions.iloc[:, [0, 2]]
 
-# Q33 Subset by columns TransactionID and TransactionDate
+# Q30 Subset by columns TransactionID and TransactionDate
 transactions[['TransactionID', 'TransactionDate']]
 
-# Q34 Subset rows where TransactionID > 5 and subset columns by TransactionID and TransactionDate
+# Q31 Subset rows where TransactionID > 5 and subset columns by TransactionID and TransactionDate
 transactions.loc[transactions.TransactionID > 5, ['TransactionID', 'TransactionDate']]
 
-# Q35 Subset columns by a variable list of columm names
+# Q32 Subset columns by a variable list of columm names
 cols = ["TransactionID", "UserID", "Quantity"]
 transactions[cols]
 
-# Q36 Subset columns excluding a variable list of column names
+# Q33 Subset columns excluding a variable list of column names
 cols = ["TransactionID", "UserID", "Quantity"]
 transactions.drop(cols, axis=1)
 
 #======================================================================================================
 # Inserting and updating values
 
-# Q37 Convert the TransactionDate column to type Date
+# Q34 Convert the TransactionDate column to type Date
 transactions['TransactionDate'] = pd.to_datetime(transactions.TransactionDate)
 
-# Q38 Insert a new column, Foo = UserID + ProductID
+# Q35 Insert a new column, Foo = UserID + ProductID
 transactions['Foo'] = transactions.UserID + transactions.ProductID
 
-# Q39 Subset rows where TransactionID is even and set Foo = NA
+# Q36 Subset rows where TransactionID is even and set Foo = NA
 transactions.loc[transactions.TransactionID % 2 == 0, 'Foo'] = np.nan
 
-# Q40 Add 100 to each TransactionID
+# Q37.   Add 100 to each TransactionID
 transactions.TransactionID = transactions.TransactionID + 100
 transactions.TransactionID = transactions.TransactionID - 100  # revert to original IDs
 
-# Q41 Insert a column indicating each row number
+# Q38 Insert a column indicating each row number
 transactions['RowIdx'] = np.arange(transactions.shape[0])
 
-# Q42 Insert columns indicating the rank of each Quantity, minimum Quantity and maximum Quantity
+# Q39 Insert columns indicating the rank of each Quantity, minimum Quantity and maximum Quantity
 transactions['QuantityRk'] = transactions.Quantity.rank(method='average')
 transactions['QuantityMin'] = transactions.Quantity.min()
 transactions['QuantityMax'] = transactions.Quantity.max()
 
-# Q43 Remove column Foo
+# Q40 Remove column Foo
 transactions.drop('Foo', axis=1, inplace=True)
 
-# Q44 Remove multiple columns RowIdx, QuantityRk, and RowIdx
+# Q41 Remove multiple columns RowIdx, QuantityRk, and RowIdx
+
 transactions.drop(['QuantityRk', 'QuantityMin', 'QuantityMax'], axis=1, inplace=True)
 
 #======================================================================================================
@@ -406,12 +306,14 @@ transactions.drop(['QuantityRk', 'QuantityMin', 'QuantityMax'], axis=1, inplace=
 #--------------------------------------------------
 # Group By + Aggregate
 
-# Q45 Group the transations per user, measuring the number of transactions per user
+# Q42 Group the transations per user, measuring the number of transactions per user
+
 transactions.groupby('UserID').apply(lambda x: pd.Series(dict(
     Transactions=x.shape[0]
 ))).reset_index()
 
-# 46 Group the transactions per user, measuring the transactions and average quantity per user
+# Q43 Group the transactions per user, measuring the transactions and average quantity per user
+
 transactions.groupby('UserID').apply(lambda x: pd.Series(dict(
     Transactions=x.shape[0],
     QuantityAvg=x.Quantity.mean()
@@ -422,13 +324,14 @@ transactions.groupby('UserID').apply(lambda x: pd.Series(dict(
 #======================================================================================================
 # Joining DataFrames
 
-# Q 47 Load datasets from CSV
+# Q44. Load datasets from CSV
+
 users = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/users.csv')
 sessions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/sessions.csv')
 products = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/products.csv')
 transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
 
-# Q48 Convert date columns to Date type
+# Q45 Convert date columns to Date type
 users['Registered'] = pd.to_datetime(users.Registered)
 users['Cancelled'] = pd.to_datetime(users.Cancelled)
 transactions['TransactionDate'] = pd.to_datetime(transactions.TransactionDate)
@@ -469,7 +372,6 @@ pd.merge(transactions, transactions, on='UserID')
 
 # Q57 Join each user to his/her first occuring transaction in the transactions table
 pd.merge(users, transactions.groupby('UserID').first().reset_index(), how='left', on='UserID')
-
 
 #======================================================================================================
 # Reshaping a data.table
