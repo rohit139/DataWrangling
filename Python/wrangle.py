@@ -1,7 +1,7 @@
-# Exercise on wrangling Data With pandas
+# Exercises on wrangling Data With pandas
 # ATTEMPT AS MANY QUESTIONS AS YOU CAN 
 # PREFERABLY ANSWER AT LEAST 45 QUESTIONS
-# SEE ANSWERS BELOW (LINE 152)
+# SEE ANSWERS BELOW LINE 154
 
 #======================================================================================================
 # Import numpy and pandas
@@ -10,25 +10,27 @@ import numpy as np
 import pandas as pd
 
 #======================================================================================================
-# Build an example DataFrame from scratch
+# Build an example DataFrame to work with (copy and paste in ipython/spyder/juputer notebook):
 
-transactions = pd.DataFrame({
-    'TransactionID': np.arange(10)+1,
-    'TransactionDate': pd.to_datetime(['2010-08-21', '2011-05-26', '2011-06-16', '2012-08-26', '2013-06-06', 
-                              '2013-12-23', '2013-12-30', '2014-04-24', '2015-04-24', '2016-05-08']).date,
-    'UserID': [7, 3, 3, 1, 2, 2, 3, np.nan, 7, 3],
-    'ProductID': [2, 4, 3, 2, 4, 5, 4, 2, 4, 4],
-    'Quantity': [1, 1, 1, 3, 1, 6, 1, 3, 3, 4]
-})
+transactions = pd.DataFrame(
+                             {
+                              'TransactionID': np.arange(10)+1,
+                              'TransactionDate': pd.to_datetime(['2010-08-21', '2011-05-26', '2011-06-16', '2012-08-26', '2013-06-06', 
+                                                                '2013-12-23', '2013-12-30', '2014-04-24', '2015-04-24', '2016-05-08']).date,
+                               'UserID':    [7, 3, 3, 1, 2, 2, 3, np.nan, 7, 3],
+                               'ProductID': [2, 4, 3, 2, 4, 5, 4, 2, 4, 4],
+                               'Quantity':  [1, 1, 1, 3, 1, 6, 1, 3, 3, 4]
+                            }
+                           )
 
 #======================================================================================================
-# Read data from a CSV file
+# OR. read data from a CSV file on github
 
 # Load transactions. Data is imported from github site
 transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
 
 #======================================================================================================
-#AA. Meta info  (SEE ALL ANSWERS BELOW (LINE 240))
+#AA. Meta info  (SEE ALL ANSWERS BELOW (LINE 154))
 
 # Q1 Show dataframe summary 
 # Q2 How many observations are there in data?
@@ -47,16 +49,16 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #AC. Ordering the columns of a DataFrame
 
 # Q10 Set the column order of transactions as: ProductID, Quantity, TransactionDate, TransactionID, UserID
-# Q11 Make UserID the first column of transactions
+# Q11 Make UserID the first column of transactions dataset
 
 #======================================================================================================
 #AD. Extracting arrays from a DataFrame
 
 # Q12 Extract just the 2nd column 
-# Q13 Get ProductID array
+# Q13 Get ProductID as an array of values
 # Q14 Let:
        col = "ProductID"
-#     Use col to get all ProductID values as an array    
+#     Use variable 'col' to get all ProductID values of dataset as an array    
 
 
 #======================================================================================================
@@ -90,11 +92,11 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 #AG. Inserting and updating values
 
-# Q34 Convert the TransactionDate column to type Date  (SEE ALL ANSWERS BELOW (LINE 240))
+# Q34 Convert the TransactionDate column to type Date  
 # Q35 Insert a new column, Foo = UserID + ProductID
 # Q36 Subset rows where TransactionID is even and set Foo = NA
 # Q37  Add 100 to each TransactionID
-# Q38 Insert a column indicating each row number  (SEE ALL ANSWERS BELOW (LINE 240))
+# Q38 Insert a column indicating each row number  
 # Q39 Insert columns indicating the rank of each Quantity, minimum Quantity and maximum Quantity
 # Q40 Remove column Foo
 # Q41 Remove multiple columns RowIdx, QuantityRk, and RowIdx
@@ -113,14 +115,14 @@ transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangli
 #======================================================================================================
 #AI. Joining DataFrames
 
-# Load followinng datasets from CSV  and answer questions relating to Basic Joins (below):
+# Load followinng datasets from CSV files on github and answer questions relating to Basic Joins (below):
 
 users = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/users.csv')
 sessions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/sessions.csv')
 products = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/products.csv')
 transactions = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/transactions.csv')
 
-# Q44 Convert date columns to Date type  (SEE ALL ANSWERS BELOW (LINE 240))
+# Q44 Convert date columns to Date type  
 
 #--------------------------------------------------
 #AJ. Basic Joins
